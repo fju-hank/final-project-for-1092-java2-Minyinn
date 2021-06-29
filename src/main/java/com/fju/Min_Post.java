@@ -313,7 +313,7 @@ public class Min_Post extends JFrame {
 				Collections.sort(compareList);
 				/* 設定5種箱子預設尺寸 */ /* Box1~5 */
 				int[][] box = { { 10, 20, 25 }, { 20, 40, 40 }, { 35, 40, 60 }, { 45, 50, 70 }, { 30, 90, 100 } };
-				ArrayList<Integer> getBoxNumArrayList = new ArrayList<Integer>();
+					ArrayList<Integer> getBoxNumArrayList = new ArrayList<Integer>();
 				/* 判斷輸入的箱子是否在箱子範圍內 */
 				if ((compareList.get(0) > 0 && compareList.get(0) <= 45)
 						&& (compareList.get(1) > 0 && compareList.get(1) <= 90)
@@ -331,7 +331,7 @@ public class Min_Post extends JFrame {
 					boxSizeLb.setText("Box" + String.valueOf(getBoxNumArrayList.get(0) + 1));
 					int[] boxPrice = { 100, 150, 200, 300, 400 };
 					String priceStr = String.valueOf(boxPrice[getBoxNumArrayList.get(0)]);
-					priceLb.setText(priceStr);
+					priceLb.setText("$" + priceStr);
 					compareList.clear();
 				} else {
 					System.out.println("Out of bound!!!");
